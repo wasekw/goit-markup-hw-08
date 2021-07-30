@@ -89,3 +89,44 @@
 // .work__img--wrapper {
 //   position: relative;
 // }
+
+.work {
+  display: none;
+}
+
+.work {
+  @media screen and (min-width: 1200px) {
+    display: block;
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__list {
+      display: flex;
+    }
+
+    &__list &__item + &__item,
+    &__list &__item + &__item {
+      margin-left: 30px;
+    }
+
+    &__title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      padding-top: 27px;
+
+      @include font(700, 14px, 1.14);
+      text-align: center;
+      text-transform: uppercase;
+
+      color: var(--primary-white-color);
+      background: rgba(47, 48, 58, 0.8);
+    }
+
+    &__img--wrapper {
+      position: relative;
+    }
+  }
+}
