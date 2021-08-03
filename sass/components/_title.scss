@@ -1,7 +1,15 @@
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  @include font($fs: 36px, $lh: 1.17);
+  @include font($fs: 28px, $lh: 1.17);
   text-align: center;
   color: var(--title-text-color);
+}
+
+.title {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    @include font($fs: 36px, $lh: 1.17);
+  }
 }
