@@ -284,8 +284,8 @@ body {
 
 .hero {
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../../images/background/hero.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background/hero.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/background/hero.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background/hero.jpg");
   width: 480px;
   min-height: 400px;
   background-position: center;
@@ -300,7 +300,7 @@ body {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../../images/background/hero@2x.jpg");
+    background-image: url("../images/background/hero@2x.jpg");
   }
 }
 
@@ -317,20 +317,20 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     width: 768px;
-    background-image: url("../../images/background/hero-tab.jpg");
+    background-image: url("../images/background/hero-tab.jpg");
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../../images/background/hero-tab@2x.jpg");
+    background-image: url("../images/background/hero-tab@2x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     width: 1200px;
-    background-image: url("../../images/background/hero-lap.jpg");
+    background-image: url("../images/background/hero-lap.jpg");
     min-height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -339,7 +339,7 @@ body {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../../images/background/hero-lap@2x.jpg");
+    background-image: url("../images/background/hero-lap@2x.jpg");
   }
 }
 
@@ -679,6 +679,20 @@ body {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 }
 
 .portfolio {
