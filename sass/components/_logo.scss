@@ -7,4 +7,11 @@
   @include font($fs: 26px, $lh: 1.19);
   color: var(--logo-color);
   text-decoration: none;
+
+  &,
+  .header__link {
+    display: block;
+
+    cursor: pointer;
+  }
 }
