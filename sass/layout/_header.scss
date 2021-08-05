@@ -1,19 +1,3 @@
-// .current.header__link.main::after {
-//   width: 48px;
-// }
-
-// .current.header__link::after {
-//   position: relative;
-//   bottom: -31px;
-//   content: "";
-//   display: block;
-//   width: 78px;
-//   height: 4px;
-
-//   background: var(--button-blue-color);
-//   border-radius: 2px;
-// }
-
 .header {
   padding-top: 16px;
   padding-bottom: 16px;
@@ -62,6 +46,9 @@
     visibility: hidden;
     pointer-events: none;
 
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &.is-open {
       opacity: 1;
       visibility: visible;
@@ -70,8 +57,8 @@
 
     &__close-btn {
       position: absolute;
-      top: 10px;
-      right: 28px;
+      top: 15px;
+      right: 15px;
     }
 
     &__container {
@@ -207,83 +194,149 @@
     }
   }
 
-  // @media screen and (min-width: 768px) {
-  //   &__main {
-  //     display: flex;
-  //     align-items: center;
-  //   }
+  @media screen and (min-width: 768px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-  //   &__nav {
-  //     display: flex;
-  //   }
+    &__nav {
+      display: flex;
+    }
 
-  //   &__list {
-  //     display: flex;
-  //     align-items: center;
-  //   }
+    &__list {
+      display: flex;
+      align-items: center;
+      margin-left: 88px;
+    }
 
-  //   &__list--contacts {
-  //     display: flex;
-  //     margin-left: auto;
-  //   }
+    &__list--contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: auto;
+    }
 
-  //   &__icons:first-child {
-  //     width: 16px;
-  //     height: 12px;
-  //     margin-right: 10px;
-  //     fill: var(--primary-text-color);
-  //   }
+    &__burger-btn {
+      display: none;
+    }
 
-  //   &__icons--phone.header__icons {
-  //     width: 10px;
-  //     height: 16px;
-  //   }
+    &__icons:first-child {
+      width: 14px;
+      height: 10px;
+      margin-right: 8px;
+      fill: var(--primary-text-color);
+    }
 
-  // До этого просто сбросить комментарий
+    &__icons--phone.header__icons {
+      width: 10px;
+      height: 14px;
+    }
 
-  // .header__link--contacts {
-  //   @extend %align;
-  //   justify-content: center;
+    &__link--contacts {
+      @include font($fw: 500, $fs: 12px, $lh: 1.17);
+      letter-spacing: 0.02em;
+      color: var(--primary-text-color);
+      cursor: pointer;
 
-  //   @include font($fw: 500, $fs: 14px, $lh: 1.14);
-  //   letter-spacing: 0.02em;
-  //   color: var(--primary-text-color);
-  //   cursor: pointer;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  //   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover .header__icons,
+      &:focus .header__icons {
+        fill: var(--button-blue-color);
+      }
+      &:hover,
+      &:focus {
+        color: var(--button-blue-color);
+      }
+    }
 
-  //   &:hover .header__icons,
-  //   &:focus .header__icons {
-  //     fill: var(--button-blue-color);
-  //   }
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--button-blue-color);
-  //   }
-  // }
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
 
-  // .header__list--contacts .header__item--contacts + .header__item--contacts {
-  //   margin-left: 30px;
-  // }
+    &__link {
+      @include font($fw: 500, $fs: 14px, $lh: 1.14);
+      letter-spacing: 0.02em;
+      color: var(--title-text-color);
 
-  // .header__item:not(:last-child) {
-  //   margin-right: 50px;
-  // }
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  // .header__link {
-  //   font-weight: 500;
-  //   line-height: 1.14;
-  //   letter-spacing: 0.02em;
-  //   color: var(--title-text-color);
+      &:hover,
+      &:focus {
+        color: var(--button-blue-color);
+      }
+    }
 
-  //   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &__link.current {
+      color: var(--button-blue-color);
+    }
+  }
 
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--button-blue-color);
-  //   }
-  // }
-  // .current.header__link {
-  //   color: var(--button-blue-color);
-  // }
+  @media screen and (min-width: 1200px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    &__list {
+      margin-left: 93px;
+    }
+
+    &__list--contacts {
+      flex-direction: row;
+    }
+
+    &__icons:first-child {
+      width: 16px;
+      height: 10px;
+      margin-right: 10px;
+    }
+
+    &__icons--phone.header__icons {
+      width: 12px;
+      height: 16px;
+    }
+
+    &__link--contacts {
+      @include font($fw: 500, $fs: 14px, $lh: 1.14);
+    }
+
+    &__list--contacts .header__item--contacts + .header__item--contacts {
+      margin-left: 30px;
+    }
+  }
+}
+
+.current.header__link {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &.main::after {
+      width: 47px;
+    }
+
+    &::after {
+      position: relative;
+      bottom: -21px;
+      content: "";
+      display: block;
+      width: 75px;
+      height: 4px;
+
+      background: var(--button-blue-color);
+      border-radius: 2px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &.main::after {
+      width: 48px;
+    }
+
+    &::after {
+      position: relative;
+      bottom: -28px;
+      content: "";
+      display: block;
+      width: 78px;
+      height: 4px;
+
+      background: var(--button-blue-color);
+      border-radius: 2px;
+    }
+  }
 }

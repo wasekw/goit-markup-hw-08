@@ -35,7 +35,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 1199px;
     background-image: url("../images/background/hero-tab.jpg");
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -46,7 +46,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: 1200px;
+    max-width: 1600px;
     background-image: url("../images/background/hero-lap.jpg");
     min-height: 600px;
     padding-top: 200px;
