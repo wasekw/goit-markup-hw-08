@@ -37,4 +37,9 @@ body {
   font-family: var(--main-font);
   font-style: normal;
   letter-spacing: 0.03em;
+
+  // Прописав строку в JavaScript файл modal.js document.body.classList.toggle("modal-open"); для body добавляем класс modal-open и снимаем прокрутку с body при открытой модалке
+  &.modal-open {
+    overflow: hidden;
+  }
 }
