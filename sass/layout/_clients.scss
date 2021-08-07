@@ -53,6 +53,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    & {
+      padding-top: 60px;
+    }
+
     &__item {
       width: 226px;
     }
@@ -63,6 +67,11 @@
   }
 
   @media screen and (min-width: 1200px) {
+    & {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+
     &__item {
       width: 170px;
       margin-bottom: 0;

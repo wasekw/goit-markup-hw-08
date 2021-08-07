@@ -964,6 +964,9 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
+  .clients {
+    padding-top: 60px;
+  }
   .clients__item {
     width: 226px;
   }
@@ -973,6 +976,10 @@ body.modal-open {
 }
 
 @media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .clients__item {
     width: 170px;
     margin-bottom: 0;
