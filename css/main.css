@@ -388,16 +388,16 @@ body.modal-open {
 }
 
 .header .nav-list {
-  margin-bottom: 150px;
+  margin-bottom: 38vh;
 }
 
 .header .nav-list__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 4vh;
 }
 
 .header .nav-list__link {
   font-weight: 500;
-  font-size: 32px;
+  font-size: 8.33vw;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.02em;
@@ -408,35 +408,42 @@ body.modal-open {
   color: var(--button-blue-color);
 }
 
+.header .nav-list__link:hover, .header .nav-list__link:focus {
+  color: var(--button-blue-color);
+}
+
 .header .nav-list__contacts--link {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 7.08vw;
   line-height: 1.18;
   letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.header .nav-list__contacts--link:hover, .header .nav-list__contacts--link:focus {
   color: var(--button-blue-color);
 }
 
 .header .nav-list__contacts--link.mail {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 5vw;
   line-height: 1.17;
-  color: var(--primary-text-color);
 }
 
 .header .nav-list__contacts--item {
-  margin-bottom: 10px;
+  margin-bottom: 3.5vh;
 }
 
 .header .nav-list__social--link {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 3.75vw;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--button-blue-color);
 }
 
 .header .nav-list__contacts {
-  margin-bottom: 15px;
+  margin-bottom: 8vh;
 }
 
 .header .nav-list__social {
@@ -448,21 +455,6 @@ body.modal-open {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-@media screen and (min-width: 350px) and (max-width: 479px) {
-  .header .nav-list {
-    margin-bottom: 180px;
-  }
-  .header .nav-list__item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  .header .nav-list__contacts {
-    margin-bottom: 25px;
-  }
-  .header .nav-list__contacts--item {
-    margin-bottom: 20px;
-  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -984,7 +976,7 @@ body.modal-open {
 }
 
 .clients__link:hover .clients__picture,
-.clients__linkfocus .clients__picture {
+.clients__link:focus .clients__picture {
   fill: #2196f3;
 }
 

@@ -93,14 +93,14 @@
   }
 
   .nav-list {
-    margin-bottom: 150px;
+    margin-bottom: 38vh;
 
     &__item:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 4vh;
     }
 
     &__link {
-      @include font($fw: 500, $fs: 32px, $lh: 1.15);
+      @include font($fw: 500, $fs: 8.33vw, $lh: 1.15);
       text-align: center;
       letter-spacing: 0.02em;
 
@@ -109,32 +109,40 @@
       &.current {
         color: var(--button-blue-color);
       }
+
+      &:hover,
+      &:focus {
+        color: var(--button-blue-color);
+      }
     }
 
     &__contacts--link {
-      @include font($fw: 500, $fs: 28px, $lh: 1.18);
+      @include font($fw: 500, $fs: 7.08vw, $lh: 1.18);
       letter-spacing: 0.02em;
 
-      color: var(--button-blue-color);
+      color: var(--primary-text-color);
+
+      &:hover,
+      &:focus {
+        color: var(--button-blue-color);
+      }
     }
 
     &__contacts--link.mail {
-      @include font($fw: 500, $fs: 20px, $lh: 1.17);
-
-      color: var(--primary-text-color);
+      @include font($fw: 500, $fs: 5vw, $lh: 1.17);
     }
     &__contacts--item {
-      margin-bottom: 10px;
+      margin-bottom: 3.5vh;
     }
     &__social--link {
-      @include font($fw: 500, $fs: 14px, $lh: 1.22);
+      @include font($fw: 500, $fs: 3.75vw, $lh: 1.22);
       letter-spacing: 0.02em;
 
       color: var(--button-blue-color);
     }
 
     &__contacts {
-      margin-bottom: 15px;
+      margin-bottom: 8vh;
     }
 
     &__social {
@@ -146,22 +154,6 @@
       margin-right: 10px;
       padding-right: 10px;
       border-right: 1px solid rgba(33, 33, 33, 0.2);
-    }
-
-    @media screen and (min-width: 350px) and (max-width: 479px) {
-      margin-bottom: 180px;
-
-      &__item:not(:last-child) {
-        margin-bottom: 20px;
-      }
-
-      &__contacts {
-        margin-bottom: 25px;
-      }
-
-      &__contacts--item {
-        margin-bottom: 20px;
-      }
     }
 
     @media screen and (min-width: 480px) and (max-width: 768px) {
